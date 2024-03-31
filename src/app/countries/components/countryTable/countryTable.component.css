@@ -6,9 +6,3 @@ img {
   background-color: aqua;
   text-shadow: 10cm;
 }
-
-.card-img-top:hover{
-  transform: scale(0.95);
-  transition: .5s;
-  border-radius: 5px;
-}

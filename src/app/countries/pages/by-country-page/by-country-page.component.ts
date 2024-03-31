@@ -11,12 +11,24 @@ export class ByCountryPageComponent {
 
   public countries:Country[]=[];
 
+  public isLoading:boolean=false;
+
+  public initialValue:string='';
+
   constructor (private countriesServices:CountriesService){}
 
+  ngOnInit(): void {
+    this.countries=this.countriesServices.caheStore.byCountry.countries;
+    this.initialValue=this.countriesServices.caheStore.byCountry.term;
+  }
+
   searchByCountry(term:string):void{
+    this.isLoading=true;
+
     const answer=this.countriesServices.searchCountry(term)
       .subscribe(countries=>{
         this.countries=countries
+        this.isLoading=false;
       });
   }
 }

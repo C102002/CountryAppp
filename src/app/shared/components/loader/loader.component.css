@@ -1,0 +1,23 @@
+.spinner-loader{
+  align-items: center;
+  border-radius: 20px;
+  background-color: black;
+  bottom: 15px;
+  color: white;
+  display: flex;
+  padding: 5px 10px;
+  position: fixed;
+  right: 15px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+}
+.spinner-loader:hover{
+  background: linear-gradient(
+    45deg,
+    hsl(173, 10%, 52%),
+    hsl(173, 10%, 0%)100%
+  );
+}
+span{
+  margin-left: 10px;
+  margin-right: 10px;
+}
