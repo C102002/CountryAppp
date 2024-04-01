@@ -8,20 +8,26 @@ import { Observable, catchError, map, of } from 'rxjs';
   templateUrl: './GoogleMapsDemo.component.html',
   styleUrls: ['./GoogleMapsDemo.component.css'],
 })
-export class GoogleMapsDemoComponent implements OnInit {
+export class GoogleMapsDemoComponent implements OnInit{
   apiLoaded!: Observable<boolean>;
 
   @Input()
-  Countrylatng:number[]=[];
-
-  CountrylatngLiteral!:google.maps.LatLngLiteral
+  Countrylatng!:google.maps.LatLngLiteral;
 
   @Input()
-  locationLiteral!:google.maps.LatLngLiteral
+  locationLiteral!:google.maps.LatLngLiteral;
+
+  @Input()
+  options!: google.maps.MapOptions
+
+  zoom:number=8;
 
   lenguage:string=navigator.language;
 
-  private apiLoading():Observable<boolean>{
+  public isLoading:boolean=false;
+
+
+  private apiLoading ():Observable<boolean>{
     const url='https://maps.googleapis.com/maps/api/js?key=AIzaSyBiG_lMtofhM0g89J3ioQdjEyeTyd_1F74'
     return this.httpClient.jsonp<boolean>(url,'callback')
       .pipe(
@@ -30,21 +36,15 @@ export class GoogleMapsDemoComponent implements OnInit {
       )
   }
 
+  private displayGoogleMaps():void{
+    setTimeout(() => {
+      this.apiLoaded=this.apiLoading();
+    }, 5000);
+    this.isLoading=true;
+  }
+
   constructor(private httpClient: HttpClient) {}
   ngOnInit(): void {
-
-    this.apiLoaded=this.apiLoading();
-
-    if(this.apiLoaded){
-      this.CountrylatngLiteral={
-        lat:this.Countrylatng[0],
-        lng:this.Countrylatng[1]
-      }
-      console.log('Google map element');
-
-      console.log('literal'+this.locationLiteral);
-      console.log('number'+this.CountrylatngLiteral);
-    }
-    else throw new Error('Error al cargar')
+    this.displayGoogleMaps();
   }
  }

@@ -1,0 +1,13 @@
+.alert{
+  transition: all 1s;
+}
+
+.alert:hover{
+  transform: scale(0.98);
+
+  background: linear-gradient(
+    45deg,
+    hsl(181, 52%, 55%),
+    hsl(190, 100%, 75%)100%
+  );
+}

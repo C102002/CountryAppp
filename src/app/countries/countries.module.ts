@@ -12,6 +12,7 @@ import { GoogleModule } from '../google/google.module';
 import { LenguageInfoComponent } from './components/lenguageInfo/lenguageInfo.component';
 import { TraduccionInfoComponent } from './components/traduccionInfo/traduccionInfo.component';
 import { MoreInfoComponent } from './components/moreInfo/moreInfo.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 
@@ -31,7 +32,8 @@ import { MoreInfoComponent } from './components/moreInfo/moreInfo.component';
     CommonModule,
     CountriesRoutingModule,
     SharedModule,
-    GoogleModule
+    GoogleModule,
+    GoogleMapsModule
   ],
 })
 export class CountriesModule { }

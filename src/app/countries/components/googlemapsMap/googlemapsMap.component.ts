@@ -9,34 +9,38 @@ import { CapitalInfo } from '../../interfaces/country';
 })
 export class GooglemapsMapComponent implements OnInit {
   ngOnInit(): void {
+    this.capitalinfoCenter={
+      lat:this.capitalinfo.latlng[0],
+      lng:this.capitalinfo.latlng[1]
+    }
+    console.log('prueba'+this.capitalinfoCenter);
+
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
         lat: position.coords.latitude,
         lng: position.coords.longitude,
       };
     });
-    this.capitalinfoCenter=this.capitalinfo.latlng
   }
   @Input()
   capitalinfo!:CapitalInfo
 
-  capitalinfoCenter:number[]=[];
+  capitalinfoCenter!:google.maps.LatLngLiteral;
 
-  zoom = 12;
+  zoom = 1;
   center!: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
-    mapTypeId: 'hybrid',
-    zoomControl: false,
-    scrollwheel: false,
+    zoomControl: true,
+    scrollwheel: true,
     disableDoubleClickZoom: true,
-    maxZoom: 15,
-    minZoom: 8,
   };
 
 
 
   zoomIn() {
-    console.log('componente',this.capitalinfo?.latlng);
+    console.log('componente',this.capitalinfoCenter);
+    console.log('componente',this.center);
+
     // if (this.zoom < this.options.maxZoom) this.zoom++;
   }
 

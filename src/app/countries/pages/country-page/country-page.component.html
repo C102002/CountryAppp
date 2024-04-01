@@ -1,8 +1,5 @@
 <ng-template #loading>
-  <div class="alert alert-info align-content-center text-center animate__animated animate__fadeIn">
-    <h3>Espere por favor</h3>
-    <img src="assets/loader.svg" alt="Cargando...">
-  </div>
+  <shared-loader-specific></shared-loader-specific>
 </ng-template>
 
 <!-- TODO: Hacer las monedas de los paises-->
@@ -38,9 +35,6 @@
         </li>
         <li class="list-group-item list-group-item-action list-group-item-dark">
           <strong>SubRegion:</strong> {{country.subregion}}
-        </li>
-        <li class="list-group-item list-group-item-action list-group-item-light">
-          <strong>Capital:</strong> {{country.capital}}
         </li>
       </ul>
     </div>

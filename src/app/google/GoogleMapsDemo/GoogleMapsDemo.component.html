@@ -1,8 +1,17 @@
-<div *ngIf="apiLoaded | async" class="img-thumbnail">
-  <google-map
+<div *ngIf="!(apiLoaded | async); else google" class="img-thumbnail animate__animated animate__fadeIn">
+  <shared-loader-specific></shared-loader-specific>
+</div>
+
+<ng-template #google>
+  <div class="img-thumbnail animate__animated animate__fadeIn">
+    <google-map
     id="map"
     height="500px"
     width="100%"
-    [center]="CountrylatngLiteral">
+    [center]='Countrylatng'
+    [options]="options"
+    [zoom]="zoom"
+    >
   </google-map>
-</div>
+  </div>
+</ng-template>

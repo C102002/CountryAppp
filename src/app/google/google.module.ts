@@ -5,6 +5,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { GoogleMapsDemoComponent } from './GoogleMapsDemo/GoogleMapsDemo.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,6 +18,7 @@ import { GoogleMapsDemoComponent } from './GoogleMapsDemo/GoogleMapsDemo.compone
     GoogleMapsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    SharedModule
   ],
   exports: [
     GoogleMapsDemoComponent,

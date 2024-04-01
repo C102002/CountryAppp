@@ -1,5 +1,6 @@
-<app-google-maps-demo [Countrylatng]="capitalinfoCenter" [locationLiteral]="center"></app-google-maps-demo>
-<div class="d-flex align-content-between flex-wrap">
-  <button class="btn btn-primary m-2" (click)="zoomOut()">Zoom Out -</button>
-  <button class="btn btn-primary m-2" (click)="zoomIn()">Zoom In+</button>
-</div>
+<app-google-maps-demo
+  [Countrylatng]="capitalinfoCenter"
+  [locationLiteral]="center"
+  [options]="options"
+  >
+</app-google-maps-demo>
