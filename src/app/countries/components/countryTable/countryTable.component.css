@@ -27,6 +27,20 @@ table tbody tr.tr-odd:hover td{
   );
 }
 
+.alert{
+  transition: all 1s;
+}
+
+.alert:hover{
+  transform: scale(0.98);
+
+  background: linear-gradient(
+    45deg,
+    RGB(255, 193, 7),
+    hsl(64, 100%, 75%)100%
+  );
+}
+
 a{
   text-decoration: none;
   color: white;

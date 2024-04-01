@@ -1,3 +1,13 @@
-:host {
-  display: block;
+.img-fluid {
+  height: 38px;
+  width: auto;
+}
+
+.d-flex{
+  transition: all.5s;
+}
+
+.d-flex:hover{
+  transform: scale(0.95);
+  border-radius: 5px;
 }

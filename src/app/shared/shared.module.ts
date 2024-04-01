@@ -11,7 +11,7 @@ import { LogoComponent } from './components/logo/logo.component';
 
 
 @NgModule({
-  declarations: [HomePageComponent,AboutPageComponent,SidebarComponent,SearchBoxComponent,LoaderComponent,LogoComponent],
+  declarations: [HomePageComponent,AboutPageComponent,SidebarComponent,SearchBoxComponent,LoaderComponent,LogoComponent,LogoComponent],
   imports: [
     CommonModule,
     RouterModule

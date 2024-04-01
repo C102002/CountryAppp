@@ -1,19 +1,19 @@
 <ng-template #loading>
-  <div class="alert alert-info align-content-center text-center">
+  <div class="alert alert-info align-content-center text-center animate__animated animate__fadeIn">
     <h3>Espere por favor</h3>
     <img src="assets/loader.svg" alt="Cargando...">
   </div>
 </ng-template>
 
 <div *ngIf="country; else loading">
-  <div class="row">
+  <div class="row animate__animated animate__fadeIn">
     <div class="col-12">
       <h2>Pais:{{country?.name?.common}}</h2>
       <hr>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row animate__animated animate__fadeIn">
     <div class="col-4">
       <h3>Bandera:</h3>
       <img [src]="country.flags.svg" alt="country.name.common" class="img-thumbnail ">
@@ -42,18 +42,18 @@
       </ul>
     </div>
   </div>
-  <countries-traduccion-info [country]="country"></countries-traduccion-info>
+  <countries-traduccion-info class="animate__animated animate__fadeIn" [country]="country"></countries-traduccion-info>
   <hr>
 
   <div class="row">
     <div class="col-8 bg-image hover-zoom">
       <h3>Ubicacion:</h3>
-      <countries-googlemaps-map [capitalinfo]='country.capitalInfo' ></countries-googlemaps-map>
+      <countries-googlemaps-map [capitalinfo]='country.capitalInfo' class="animate__animated animate__fadeIn"></countries-googlemaps-map>
     </div>
     <div class="col">
       <h3>Mas Informacion:</h3>
-      <countries-more-info [country]="country"></countries-more-info>
-      <components-lenguage-info [country]="country"></components-lenguage-info>
+      <countries-more-info [country]="country" class="animate__animated animate__fadeIn"></countries-more-info>
+      <components-lenguage-info [country]="country" class="animate__animated animate__fadeIn"></components-lenguage-info>
     </div>
   </div>
 </div>

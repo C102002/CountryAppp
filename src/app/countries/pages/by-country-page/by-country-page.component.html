@@ -1,7 +1,7 @@
-<h2> Por Pais</h2>
+<h2 class="animate__animated animate__fadeIn"> Por Pais</h2>
 <hr>
 
-<div class="row">
+<div class="row animate__animated animate__fadeIn">
   <div class="col">
     <shared-search-box
       (ondDebounce)="searchByCountry($event)"
@@ -12,10 +12,10 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row animate__animated animate__fadeIn">
   <div class="col">
     <hr>
       <shared-loader *ngIf="isLoading" ></shared-loader>
-      <countries-country-table [countries]="countries"></countries-country-table>
+      <countries-country-table [countries]="countries" ></countries-country-table>
   </div>
 </div>
