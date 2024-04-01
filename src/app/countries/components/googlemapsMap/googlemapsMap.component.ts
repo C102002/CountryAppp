@@ -15,12 +15,15 @@ export class GooglemapsMapComponent implements OnInit {
         lng: position.coords.longitude,
       };
     });
+    this.capitalinfoCenter=this.capitalinfo.latlng
   }
   @Input()
-  capitalinfo?:CapitalInfo
+  capitalinfo!:CapitalInfo
+
+  capitalinfoCenter:number[]=[];
 
   zoom = 12;
-  center?: google.maps.LatLngLiteral;
+  center!: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
     mapTypeId: 'hybrid',
     zoomControl: false,

@@ -1,3 +1,8 @@
 <div *ngIf="apiLoaded | async" class="img-thumbnail">
-  <google-map id="map"></google-map>
+  <google-map
+    id="map"
+    height="500px"
+    width="100%"
+    [center]="CountrylatngLiteral">
+  </google-map>
 </div>
