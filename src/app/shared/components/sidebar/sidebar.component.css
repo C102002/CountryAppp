@@ -1,3 +1,7 @@
-:host {
-  display: block;
+.list-group-item{
+  transition: all.5s;
+}
+
+.list-group-item:hover{
+  background-color: hsl(199, 100%, 56%);
 }
