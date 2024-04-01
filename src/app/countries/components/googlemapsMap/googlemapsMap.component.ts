@@ -13,7 +13,6 @@ export class GooglemapsMapComponent implements OnInit {
       lat:this.capitalinfo.latlng[0],
       lng:this.capitalinfo.latlng[1]
     }
-    console.log('prueba'+this.capitalinfoCenter);
 
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
@@ -38,9 +37,6 @@ export class GooglemapsMapComponent implements OnInit {
 
 
   zoomIn() {
-    console.log('componente',this.capitalinfoCenter);
-    console.log('componente',this.center);
-
     // if (this.zoom < this.options.maxZoom) this.zoom++;
   }
 

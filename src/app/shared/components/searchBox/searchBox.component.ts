@@ -34,14 +34,14 @@ export class SearchBoxComponent implements OnInit,OnDestroy {
 
   ngOnInit(): void {
     //OJO siempre debemos eliminar la subscription
-    console.log(this.initialValue);
+    // console.log(this.initialValue);
 
     this.debouncerSubscription=this.debouncer
     .pipe(
       debounceTime(100)
     )
     .subscribe(value=>{
-      console.log('debaouncer',value)
+      // console.log('debaouncer',value)
       this.ondDebounce.emit(value)
     });
   }
@@ -52,7 +52,7 @@ export class SearchBoxComponent implements OnInit,OnDestroy {
 
 
   searchElement(value:string):void{
-    console.log(value);
+
     this.onValue.emit(value);
     //this.elementInput.nativeElement.value='';
   }

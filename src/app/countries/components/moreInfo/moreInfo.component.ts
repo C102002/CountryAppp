@@ -46,13 +46,11 @@ export class MoreInfoComponent {
     this.NativeNames=Object.keys(this.country.name.nativeName);
     let temp=Object.values(this.country.name.nativeName);
 
-    console.log('native',this.NativeNames)
 
     let _temp:Translation[]=[]
 
     temp.forEach(temps => {
       _temp.push(temps);
-      console.log(JSON.stringify(_temp));
     });
 
     this.NativeNames=Object.keys(_temp);

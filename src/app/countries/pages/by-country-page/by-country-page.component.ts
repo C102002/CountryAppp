@@ -28,6 +28,7 @@ export class ByCountryPageComponent {
     const answer=this.countriesServices.searchCountry(term)
       .subscribe(countries=>{
         this.countries=countries
+        this.countries=this.countriesServices.orderMayorPopulationsCountry(this.countries)
         this.isLoading=false;
       });
   }

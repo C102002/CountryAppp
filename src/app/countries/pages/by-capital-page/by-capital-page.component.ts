@@ -26,9 +26,10 @@ export class ByCapitalPageComponent implements OnInit{
     const answer=this.countriesServices.searchCapital(term)
       .subscribe(countries=>{
         this.countries=countries
+        this.countries=this.countriesServices.orderMayorPopulationsCountry(this.countries)
         this.isLoading=false;
       });
-    // console.log(this.countries);
+    console.log(this.countries);
     // this.countries=this.countriesServices.orderCountriesByCountry(this.countries);
     // console.log(this.countries);
 

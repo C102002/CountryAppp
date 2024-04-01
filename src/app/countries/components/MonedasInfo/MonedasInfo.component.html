@@ -1,0 +1,13 @@
+<div class="row mt-2">
+  <div class="col">
+    <h3 *ngIf="monedas.length>1 else lenguage">Monedas:</h3>
+    <ng-template #lenguage>
+      <h3>Moneda:</h3>
+    </ng-template>
+    <div class="d-flex flex-wrap align-content-start">
+      <div class="d-flex flex-wrap" *ngFor="let moneda of monedas let i=index">
+        <span class="badge bg-success m-1">{{monedaData[i].name}} ({{moneda}}) :{{monedaData[i].symbol}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,6 +30,7 @@ export class ByRegionPageComponent implements OnInit {
     const answer=this.countriesServices.searchRegion(region)
       .subscribe(countries=>{
         this.countries=countries
+        this.countries=this.countriesServices.orderMayorPopulationsCountry(this.countries)
       });
   }
 

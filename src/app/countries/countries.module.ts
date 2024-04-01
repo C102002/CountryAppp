@@ -13,6 +13,7 @@ import { LenguageInfoComponent } from './components/lenguageInfo/lenguageInfo.co
 import { TraduccionInfoComponent } from './components/traduccionInfo/traduccionInfo.component';
 import { MoreInfoComponent } from './components/moreInfo/moreInfo.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MonedasInfoComponent } from './components/MonedasInfo/MonedasInfo.component';
 
 
 
@@ -27,6 +28,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     LenguageInfoComponent,
     TraduccionInfoComponent,
     MoreInfoComponent,
+    MonedasInfoComponent
   ],
   imports: [
     CommonModule,

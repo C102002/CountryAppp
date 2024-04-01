@@ -40,7 +40,7 @@ export class CountriesService {
       )
   }
 
-  orderCountriesByCountry(countries:Country[]):Country[]{
+  orderMenorPopulationsCountry(countries:Country[]):Country[]{
 
     let orderCountries:Country[];
 
@@ -50,7 +50,19 @@ export class CountriesService {
       if (power1<power2) return -1;
       return 0;
     });
+    return(orderCountries);
+  }
 
+  orderMayorPopulationsCountry(countries:Country[]):Country[]{
+
+    let orderCountries:Country[];
+
+    orderCountries=countries.sort(function({population:power1}:Country,{population:power2}:Country){
+
+      if (power1<power2) return 1;
+      if (power1>power2) return -1;
+      return 0;
+    });
     return(orderCountries);
   }
 

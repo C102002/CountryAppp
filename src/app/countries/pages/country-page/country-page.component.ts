@@ -36,7 +36,7 @@ export class CountryPageComponent implements OnInit {
   searchCountry(code:string){
     this.countriesService.searchCountryByAlphaCode(code)
     .subscribe(country=>{
-      console.log(country);
+      // console.log(country);
     });
   }
 }
