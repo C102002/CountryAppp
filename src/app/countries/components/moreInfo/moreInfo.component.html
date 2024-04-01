@@ -1,0 +1,33 @@
+<div class="row mt-2">
+  <div class="col">
+    <div class="d-flex">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action list-group-item-dark">
+          <strong>Zona horaria:</strong>
+          <div class="d-flex flex-wrap">
+            <div class="justify-content-center m-1" *ngFor="let timezone of timezones">
+              <small>{{timezone}}</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-light">
+          <strong>Formato del Codigo Postal:</strong>
+          <div class="d-flex flex-wrap">
+            <div class="justify-content-center m-1">
+              <small>{{postalcode}}</small>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">
+          <strong>Fronteras:</strong>
+          <div class="d-flex flex-wrap">
+            <div *ngFor="let border of borders" class="justify-content-center m-1">
+              <button class="btn btn-secondary mt-1">
+                <a [href]="['/countries/by/'+border]">{{border}}</a>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+  </div>
+</div>

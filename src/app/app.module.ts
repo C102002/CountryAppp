@@ -5,7 +5,10 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+
 import { RouterModule } from '@angular/router';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleModule } from './google/google.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,8 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
+    GoogleMapsModule,
+    GoogleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,11 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
 import { CountriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { CountryTableComponent } from './components/countryTable/countryTable.component';
+import { GooglemapsMapComponent } from './components/googlemapsMap/googlemapsMap.component';
+import { GoogleModule } from '../google/google.module';
+import { LenguageInfoComponent } from './components/lenguageInfo/lenguageInfo.component';
+import { TraduccionInfoComponent } from './components/traduccionInfo/traduccionInfo.component';
+import { MoreInfoComponent } from './components/moreInfo/moreInfo.component';
 
 
 
@@ -17,11 +22,16 @@ import { CountryTableComponent } from './components/countryTable/countryTable.co
     ByRegionPageComponent,
     CountryPageComponent,
     CountryTableComponent,
+    GooglemapsMapComponent,
+    LenguageInfoComponent,
+    TraduccionInfoComponent,
+    MoreInfoComponent,
   ],
   imports: [
     CommonModule,
     CountriesRoutingModule,
-    SharedModule
+    SharedModule,
+    GoogleModule
   ],
 })
 export class CountriesModule { }

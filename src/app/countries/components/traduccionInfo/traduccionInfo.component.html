@@ -1,0 +1,17 @@
+<div class="row mt-2">
+  <div class="col">
+  <h3 *ngIf="traduccions.length>1 else traducciones">Traducciones:</h3>
+  <ng-template #traducciones>
+    <h3>Traducción:</h3>
+  </ng-template>
+    <div class="d-flex flex-wrap justify-content-center">
+      <div *ngFor="let traduccion of traduccions let i=index">
+      <span class="badge bg-primary m-1">
+        <!-- <a [href]="['/countries/by/'+traduccion]"> -->
+          {{traduccion||'No translation'}}:{{traduccionsInfoCommon[i]||'No translation'}}
+        <!-- </a> -->
+      </span>
+      </div>
+    </div>
+  </div>
+</div>

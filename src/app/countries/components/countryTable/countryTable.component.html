@@ -3,8 +3,8 @@
 </div>
 
 <ng-template #table>
-  <table class="table table-hover">
-    <thead class="text-center">
+  <table class="table table-responsive">
+    <thead class="title text-center table-dark">
       <tr>
         <th>#</th>
         <th>Icon</th>
@@ -15,9 +15,13 @@
         <th></th>
       </tr>
     </thead>
-    <tbody class="text-center">
-      <tr *ngFor="let country of countries let i=index let isEven=even">
-        <td [ngClass]="{par: isEven}">{{i+1}}</td>
+    <tbody class="text-center"*ngFor="let country of countries let i=index let isEven=even let isOdd=odd">
+      <tr
+      [ngClass]="{
+        'tr-even':isEven,
+        'tr-odd':isOdd,
+      }" >
+        <td>{{i+1}}</td>
         <td>
           {{country.flag}}
         </td>
@@ -28,7 +32,9 @@
         <td>{{country.capital}}</td>
         <td>{{country.population | number}}</td>
         <td>
-          <a [href]="['/countries/by/'+country.cca3]">more info</a>
+          <button class="btn btn-primary">
+            <a [href]="['/countries/by/'+country.cca3]">more info</a>
+          </button>
         </td>
       </tr>
     </tbody>

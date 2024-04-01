@@ -1,0 +1,13 @@
+<div class="row mt-2">
+  <div class="col">
+    <h3 *ngIf="laguages.length>1 else lenguage">Lenguajes:</h3>
+    <ng-template #lenguage>
+      <h3>Lenguaje:</h3>
+    </ng-template>
+    <div class="d-flex flex-wrap align-content-start">
+      <div class="d-flex flex-wrap" *ngFor="let language of laguages">
+        <span class="badge bg-primary m-1">{{language||'No translation'}} </span>
+      </div>
+    </div>
+  </div>
+</div>

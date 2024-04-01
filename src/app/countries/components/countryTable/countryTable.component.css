@@ -2,7 +2,32 @@ img {
   width: 25px;
 }
 
-.even{
+.tr-even{
   background-color: aqua;
   text-shadow: 10cm;
+}
+
+.table{
+  border-radius:  1000px;
+}
+
+table tbody tr.tr-even:hover td{
+  background-color: #d5d5d6;
+}
+
+table tbody tr.tr-odd:hover td{
+  background-color: #ececec;
+}
+
+.btn:hover{
+  background: linear-gradient(
+    45deg,
+    hsl(199, 100%, 56%),
+    hsl(229, 100%, 50%)100%
+  );
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }

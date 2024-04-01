@@ -1,0 +1,20 @@
+.badge{
+  transition: all.5s;
+  width: fit-content;
+  height: auto;
+}
+
+.badge:hover{
+  transform: scale(0.95);
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    hsl(199, 100%, 56%),
+    hsl(229, 100%, 50%)100%
+  );
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
